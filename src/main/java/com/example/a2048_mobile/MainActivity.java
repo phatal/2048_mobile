@@ -18,8 +18,18 @@ public class MainActivity extends AppCompatActivity {
         // Implement methods to update UI based on game state
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        game.saveGameState();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        game.loadGameState();
+    }
+
     // Override onPause and onResume methods to save and load game state
 }
 </merged_file>
-
-Note: The above code is a placeholder as the original file does not provide the actual code to replace "// ... existing code ...". In a real scenario, the existing code from the original file would replace these placeholders.

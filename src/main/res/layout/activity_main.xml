@@ -1,1 +1,45 @@
+<original_file>
 <!-- TODO for Duckie: Design UI with 4x4 grid for game, text views for score and high score, and necessary buttons -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:numColumns="4"
+        android:stretchMode="columnWidth" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/grid"
+        android:layout_centerHorizontal="true"
+        android:text="Score: 0" />
+
+    <TextView
+        android:id="@+id/high_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grid"
+        android:layout_centerHorizontal="true"
+        android:text="High Score: 0" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/high_score"
+        android:layout_centerHorizontal="true"
+        android:text="Reset" />
+
+</RelativeLayout>
+</original_file>
